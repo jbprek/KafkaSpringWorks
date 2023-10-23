@@ -1,8 +1,6 @@
 package com.foo;
 
-import com.foo.DataDTO;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -20,7 +18,7 @@ public class ApiController {
 
     private KafkaTemplate<Object, Object> template;
 
-    @Value("${com.foo.topic}")
+    @Value("${spring.kafka.topic}")
     private String topic;
 
     public ApiController(KafkaTemplate<Object, Object> template) {
@@ -28,10 +26,10 @@ public class ApiController {
     }
 
     @PostMapping
-    public ResponseEntity<DataDTO> createEvent(@RequestBody DataDTO dto) {
+    public ResponseEntity<String> createEvent(@RequestBody String input) {
         log.info(Instant.now().toString());
-        template.send(topic, dto);
-        return ResponseEntity.ok(dto);
+        template.send(topic, input);
+        return ResponseEntity.ok(input);
     }
 
 

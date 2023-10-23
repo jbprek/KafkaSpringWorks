@@ -1,0 +1,1 @@
+# Adapted examples from [Spring Samples](https://github.com/spring-projects/spring-kafka/tree/main/samples)

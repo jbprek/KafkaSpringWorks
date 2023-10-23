@@ -1,9 +1,8 @@
 server:
   port: 9090
 spring:
-  kafka:
-    bootstrap-servers: localhost:9092
-    producer:
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-com.foo.topic: test-topic
+    kafka:
+      topic: hello-topic
+      bootstrap-servers: localhost:9092
+      producer:
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
