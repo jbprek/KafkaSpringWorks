@@ -11,6 +11,7 @@
 	<name>kafka-sample-01</name>
 	<description>Kafka Sample 1</description>
 
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

@@ -76,13 +76,13 @@ public class Application {
 		if (foo.getFoo().startsWith("fail")) {
 			throw new RuntimeException("failed");
 		}
-		this.exec.execute(() -> System.out.println("Hit Enter to terminate..."));
+		this.exec.execute(() -> System.out.println("Kafka Listener - Hit Enter to terminate..."));
 	}
 
 	@KafkaListener(id = "dltGroup", topics = "topic1.DLT")
 	public void dltListen(byte[] in) {
 		logger.info("Received from DLT: " + new String(in));
-		this.exec.execute(() -> System.out.println("Hit Enter to terminate..."));
+		this.exec.execute(() -> System.out.println("DLT Kafka Listener -Hit Enter to terminate..."));
 	}
 
 	@Bean
@@ -99,7 +99,7 @@ public class Application {
 	@Profile("default") // Don't run from test(s)
 	public ApplicationRunner runner() {
 		return args -> {
-			System.out.println("Hit Enter to terminate...");
+			System.out.println("ApplicationRunner - Hit Enter to terminate...");
 			System.in.read();
 		};
 	}
