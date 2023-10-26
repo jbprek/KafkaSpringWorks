@@ -2,7 +2,6 @@ package io.confluent.spring.tutorial;
 
 import com.github.javafaker.Faker;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -12,16 +11,12 @@ import reactor.core.publisher.Flux;
 import java.time.Duration;
 import java.util.stream.Stream;
 
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 @Component
 class Producer {
 
-//    @Autowired
     private final KafkaTemplate<Integer, String> template;
 
-    public Producer(@Autowired KafkaTemplate<Integer, String> template) {
-        this.template = template;
-    }
 
     @EventListener(ApplicationStartedEvent.class)
     public void generate() {
