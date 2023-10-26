@@ -17,10 +17,10 @@ import static org.apache.kafka.clients.producer.ProducerConfig.*;
 @SpringBootApplication
 @EnableKafka
 //@Configuration
-public class SpringConfluentApplication {
+public class SpringConfluentProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringConfluentApplication.class, args);
+        SpringApplication.run(SpringConfluentProducerApplication.class, args);
     }
 
 
