@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.confluent.spring</groupId>
-	<artifactId>spring-confluent</artifactId>
+	<artifactId>spring-confluent-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-confluent</name>
-	<description>spring-confluent</description>
+	<name>spring-confluent-consumer</name>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
