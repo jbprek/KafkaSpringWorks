@@ -16,7 +16,6 @@ import static org.apache.kafka.clients.producer.ProducerConfig.*;
 
 @SpringBootApplication
 @EnableKafka
-//@Configuration
 public class SpringConfluentProducerApplication {
 
     public static void main(String[] args) {
