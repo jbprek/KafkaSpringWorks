@@ -15,10 +15,8 @@
 
 
     <modules>
-        <!-- AOP -->
         <module>hello/HelloProducer</module>
         <module>hello/HelloConsumer</module>
-        <!-- Configuration Properties -->
         <module>spring-kafka-samples/sample-01</module>
         <module>spring-kafka-samples/sample-02</module>
         <module>spring-kafka-samples/sample-03</module>
