@@ -24,6 +24,8 @@
         <module>spring-kafka-samples/sample-05</module>
         <module>confluent-tutorials/spring-confluent-producer</module>
         <module>confluent-tutorials/spring-confluent-consumer</module>
+        <module>confluent-tutorials/spring-confluent-streams</module>
+        <module>confluent-tutorials/spring-confluent-schema</module>
     </modules>
 
 </project>
